@@ -17,7 +17,7 @@ class Fnnn < Formula
 
   def install
     clear_env
-    system "make O_NERD=1 O_GITSTATUS=1"
+    system "make", "O_NERD=1", "O_GITSTATUS=1"
     bin.install "#{buildpath}/nnn"
   end
 end
