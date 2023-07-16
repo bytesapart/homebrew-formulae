@@ -6,8 +6,8 @@
 class Fnnn < Formula
   env :std
   desc "Fork of nnn for my personal use"
-  homepage "https://github.com/FelixKratz/nnn"
-  head "https://github.com/FelixKratz/nnn.git"
+  homepage "https://github.com/bytesapart/nnn"
+  head "https://github.com/bytesapart/nnn.git"
 
   def clear_env
     ENV.delete("CFLAGS")
