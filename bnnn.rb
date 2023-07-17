@@ -3,7 +3,7 @@
 # frozen_string_literal: true
 
 # fnnn.rb
-class Fnnn < Formula
+class Bnnn < Formula
   env :std
   desc "Fork of nnn for my personal use"
   homepage "https://github.com/bytesapart/nnn"
