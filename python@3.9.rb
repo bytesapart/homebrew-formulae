@@ -193,6 +193,7 @@ class PythonAT39 < Formula
 
     system "./configure", *args
     system "make"
+    system "xcrun dsymutil Python.framework/Versions/#{xy}/Python"
 
     ENV.deparallelize do
       # The `altinstall` target prevents the installation of files with only Python's major
@@ -201,6 +202,8 @@ class PythonAT39 < Formula
       #
       # Tell Python not to install into /Applications (default for framework builds)
       system "make", "altinstall", "PYTHONAPPSDIR=#{prefix}"
+      # There's likely a better way to copy a subdirectory tree with Homebrew, but I'm tired of Ruby syntax
+      system "tar cf - Python.framework/Versions/#{xy}/Python.dSYM | tar xvf - -C #{frameworks}"
       system "make", "frameworkinstallextras", "PYTHONAPPSDIR=#{pkgshare}" if OS.mac?
     end
 
