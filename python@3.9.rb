@@ -201,7 +201,7 @@ class PythonAT39 < Formula
       #   https://github.com/python/cpython#installing-multiple-versions
       #
       # Tell Python not to install into /Applications (default for framework builds)
-      system "make", "altinstall", "PYTHONAPPSDIR=#{prefix}"
+      # system "make", "altinstall", "PYTHONAPPSDIR=#{prefix}"
       # There's likely a better way to copy a subdirectory tree with Homebrew, but I'm tired of Ruby syntax
       # system "tar cf - Python.framework/Versions/3.9/Python.dSYM | tar xvf - -C #{frameworks}"
       # system "make", "frameworkinstallextras", "PYTHONAPPSDIR=#{pkgshare}" if OS.mac?
